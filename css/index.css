@@ -23,7 +23,7 @@ body{
     Meiryo,
     sans-serif;
     text-align: center;
-    background-image: url(../img/xxxxxxxx.JPG);
+    background-image: url(../img/background.jpg); 
     background-size: cover;
     overflow: hidden;
 }
@@ -94,6 +94,7 @@ a:hover{
 
 /*****************************/
 /* container  item           */
+
 /*****************************/
 .container01-01 , .container01-02, .container01-03 , .container01-04 {
     display: flex;
@@ -112,6 +113,7 @@ a:hover{
     margin: 0;
     line-height: 1em;
     overflow: hidden;
+    opacity: 0;/*最初は透明*/
 }
 
 .item02{
@@ -121,6 +123,21 @@ a:hover{
     margin: 0;
     line-height: 1em;
     overflow: hidden;
+    opacity: 0;
+}
+
+.fade-in{
+    animation: fadein 1.5s ease-out forwards;
+}
+@keyframes fadein{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+         opacity: 1;
+         transform: translateY(0);
+    }
 }
 
 .item01 img, .item02 img{
